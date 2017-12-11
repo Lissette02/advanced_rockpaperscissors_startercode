@@ -19,11 +19,20 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
-
-
+var userChoice="";
+var computerChoice="";
+var winner="";
+var choices=['rock', 'paper','scissors'];
 
 //FUNCTIONS
 
+$("#shoot").click(function(){
+    
+    console.log($("#choice").val());
+  $("#userchoice").append($("#choice").val() ); 
+  
+    
+}); 
 
 
 // DOCUMENT READY FUNCTION
