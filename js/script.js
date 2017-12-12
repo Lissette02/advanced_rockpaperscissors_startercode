@@ -26,7 +26,9 @@ var choices=['rock', 'paper','scissors'];
         
    
 // DOCUMENT READY FUNCTIOn
-$("#shoot").click(function(){
+$( document ).ready(function() {
+    
+    $("#shoot").click(function(){
     
     console.log($("#choice").val());
   $("#userchoice").html($("#choice").val() ); 
@@ -42,8 +44,8 @@ console.log(computerChoice);
 
 $("#shoot").click(function(){
     
-    
-  $("#comchoice").html($(computerChoice) ); 
+    console.log("test");
+  $("#comchoice").html("test"); 
   
     
 }); 
@@ -62,3 +64,7 @@ else if(userChoice === "rock"){
        
     }
 }
+
+  
+});
+
