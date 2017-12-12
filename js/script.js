@@ -23,17 +23,42 @@ var userChoice="";
 var computerChoice="";
 var winner="";
 var choices=['rock', 'paper','scissors'];
-
-//FUNCTIONS
-
+        
+   
+// DOCUMENT READY FUNCTIOn
 $("#shoot").click(function(){
     
     console.log($("#choice").val());
-  $("#userchoice").append($("#choice").val() ); 
+  $("#userchoice").html($("#choice").val() ); 
   
     
 }); 
 
 
-// DOCUMENT READY FUNCTION
 
+var computerChoice = choices[Math.floor(Math.random()*choices.length)];
+
+console.log(computerChoice); 
+
+$("#shoot").click(function(){
+    
+    
+  $("#comchoice").html($(computerChoice) ); 
+  
+    
+}); 
+
+if(userChoice===computerChoice){
+    
+        $("#result").html( "It is a tie! Try again");
+    }
+    
+else if(userChoice === "rock"){ 
+        if(computerChoice === "scissors") {
+       $("#result").html( "You win");
+    
+    }
+    else {
+       
+    }
+}
