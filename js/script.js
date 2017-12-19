@@ -19,9 +19,9 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
-var userChoice="";
-var computerChoice="";
-var winner="";
+var userChoice=null;
+var computerChoice=null;
+var winner=null;
 var choices=['rock', 'paper','scissors'];
         
    
@@ -29,41 +29,53 @@ var choices=['rock', 'paper','scissors'];
 $( document ).ready(function() {
     
     $("#shoot").click(function(){
-    
-    console.log($("#choice").val());
-  $("#userchoice").html($("#choice").val() ); 
-  
-    
-}); 
-
-
-
-var computerChoice = choices[Math.floor(Math.random()*choices.length)];
-
-console.log(computerChoice); 
-
-$("#shoot").click(function(){
-    
-    console.log("test");
-  $("#comchoice").html("test"); 
-  
-    
-}); 
-
-if(userChoice===computerChoice){
-    
-        $("#result").html( "It is a tie! Try again");
-    }
-    
-else if(userChoice === "rock"){ 
-        if(computerChoice === "scissors") {
-       $("#result").html( "You win");
-    
-    }
-    else {
+          userChoice=$("#choice").val();
+        $("#userchoice").html($("#choice").val() ); 
+          
+        var randomIndex = Math.floor(Math.random()*choices.length);
+        
+        computerChoice= choices[randomIndex];
        
+        $("#comchoice").html(computerChoice);
+   console.log(userChoice);
+   console.log(computerChoice);
+
+   if ((userChoice==="rock")&& (computerChoice==="rock")){
+        $("#result").html("Tie! Try again");
+    } else if ((userChoice==="rock")&& (computerChoice ==="paper")){
+         $("#result").html("Computer Wins");
+    } else if ((userChoice==="rock")&& (computerChoice ==="scissors")){
+        $("#result").html("You Win!");
+    }else if ((userChoice==="paper")&& (computerChoice ==="rock")){
+        $("#result").html("You Win!");
+    }else if ((userChoice==="paper")&& (computerChoice==="paper")){
+        $("#result").html("Tie! Try Again!");
+    }else if ((userChoice==="paper")&& (computerChoice==="scissors")){
+        $("#result").html("Computer Wins!");
+    }else if ((userChoice==="Scissors")&& (computerChoice==="rock")){
+        $("#result").html("Computer Wins!");
+    }else if ((userChoice==="Scissors")&& (computerChoice==="paper")){
+        $("#result").html("You Win!");
+    }else if ((userChoice==="Scissors")&& (computerChoice==="scissors")){
+        $("#result").html("Tie! Try again!");
+    }else{
+        $("#result").html("Invalid Choice");
     }
-}
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+  
+  
+    
+});
 
   
 });

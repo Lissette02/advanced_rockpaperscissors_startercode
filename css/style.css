@@ -1,3 +1,12 @@
-#rps{height:40%;
-    width:40%;
+#rps{height:25%;
+    width:25%;
+}
+
+ul{ display: inline-block;
+    text-align: center;
+}
+
+button{
+    border-radius:25px;
+    background-color:white;
 }
