@@ -1,4 +1,4 @@
-#rps{height:25%;
+#rps{height:10%;
     width:25%;
 }
 
@@ -7,10 +7,39 @@ ul{ display: inline-block;
 }
 
 button{
-    border-radius:25px;
+    height:35px;
+    width:65px;
+    border-radius:10px;
     background-color:white;
 }
 body{
-    background-color:#d1e1fc;
-    
+    background-color:#edfaff;
+    color:#0087ff;
+    font-family: 'Gugi', cursive;
+    margin-left:100px ;
+    margin-top:30px;
+    text-align:center; 
+    vertical-align:middle;
+}
+
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-30px);}
+  60% {transform: translateY(-15px);}
+}
+.header {
+  animation-name: bounce;
+}
+
+#choice{
+    height:30px;
+    width:200px;
+    border-radius:10px;
+    border-color:#0087ff;
 }
